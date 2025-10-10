@@ -6,7 +6,7 @@ set -e
 echo "--- Processing nlohmann_json ---"
 JSON_NAME="nlohmann-json" # Уточнил имя, так как папка называется 'json'
 JSON_URL="https://github.com/nlohmann/json"
-JSON_TAG="${PKG_VERSION}" # "v3.12.0" # Указываем нужный тег
+JSON_TAG="v${PKG_VERSION}" # "v3.12.0" # Указываем нужный тег
 
 DownloadDependency() {
   DEP_NAME=$1
@@ -44,11 +44,14 @@ DownloadDependency() {
 #  cd "${DEPS_INSTALL_DIR}"
 
 
+echo "PKG_VERSION = ${PKG_VERSION}"
 echo "DEPS_SOURCES_DIR = ${DEPS_SOURCES_DIR}"
 mkdir -p "${DEPS_SOURCES_DIR}"
 
   cd "${DEPS_SOURCES_DIR}"
   if [[ ! -d $$DEP_NAME ]]; then
+
+echo "git command = git clone --branch ${DEP_GIT_TAG} --depth 1 ${DEP_GIT_URL} ${DEPS_SOURCES_DIR}/${DEP_NAME}"
 
   # Correct: Use git clone to get the repository as a folder.
   git clone --branch "${DEP_GIT_TAG}" --depth 1 "${DEP_GIT_URL}" "${DEPS_SOURCES_DIR}/${DEP_NAME}" || {
