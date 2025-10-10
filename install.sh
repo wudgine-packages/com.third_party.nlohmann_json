@@ -18,10 +18,10 @@ DownloadDependency() {
     ADDITIVE_ARCHIVE_GIT_URI="archive/refs/tags"
   fi
 
-if [[ -n WUDGINE_ROOT ]]; then
-  SCRIPT_DIR="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" && pwd)"
-  WUDGINE_ROOT=$(realpath "${SCRIPT_DIR}/../../.wudgine")
-fi
+#if [[ -n WUDGINE_ROOT ]]; then
+#  SCRIPT_DIR="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" && pwd)"
+#  WUDGINE_ROOT=$(realpath "${SCRIPT_DIR}/../../.wudgine")
+#fi
 
   DEPS_SOURCES_DIR="${WUDGINE_ROOT}/.deps"
 
