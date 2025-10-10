@@ -6,7 +6,7 @@ set -e
 echo "--- Processing nlohmann_json ---"
 JSON_NAME="nlohmann-json" # Уточнил имя, так как папка называется 'json'
 JSON_URL="https://github.com/nlohmann/json"
-JSON_TAG="v3.12.0" # Указываем нужный тег
+JSON_TAG="${PKG_VERSION}" # "v3.12.0" # Указываем нужный тег
 
 DownloadDependency() {
   DEP_NAME=$1

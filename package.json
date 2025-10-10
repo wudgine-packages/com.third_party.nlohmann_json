@@ -1,0 +1,5 @@
+{
+  "name": "com.nlohmann.json",
+  "version": "3.12.0",
+  "has_install_scripts": true
+}
