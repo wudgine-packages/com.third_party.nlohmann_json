@@ -1,5 +1,8 @@
 {
-  "name": "com.nlohmann.json",
+  "name": "com.third_party.nlohmann_json",
   "version": "3.12.0",
-  "has_install_scripts": true
+  "has_install_scripts": true,
+  "link_libraries": [
+    "tp::nlohmann_json"
+  ]
 }

@@ -1,4 +1,4 @@
-set(NLOHMANN_JSON_SUBMODULE_PATH "${DEPS_SOURCES_DIR}/nlohmann-json")
+set(NLOHMANN_JSON_SUBMODULE_PATH "${THIRD_PARTY_DEPS_SOURCES_DIR}/com.third_party.nlohmann_json.source")
 
 if(NOT EXISTS "${NLOHMANN_JSON_SUBMODULE_PATH}/CMakeLists.txt")
     message(FATAL_ERROR "Nlohmann-json submodule not found at ${NLOHMANN_JSON_SUBMODULE_PATH}. Please ensure it is added correctly and your build script is run.")
